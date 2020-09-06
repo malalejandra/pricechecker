@@ -20,9 +20,12 @@ cursor.execute(c1)
 c2 ="""CREATE TABLE IF NOT EXISTS
 sainsbury_prices(product_id INTEGER,  price_date TEXT, price REAL, FOREIGN KEY(product_id) REFERENCES products(product_id))"""
 cursor.execute(c2)
-for i in range(len(data)):
+for row in data.iterrows():
     cursor.execute("INSERT INTO products (product_name, desired_price, url_ss, url_ss_api) VALUES (?,?,?,?)",
-                   (data.name.loc[i], float(data.desired_price.loc[i]), data.ss_url.loc[i],data.ss_api_url.loc[i]))
+                   (row[1].product_name, float(row[1].desired_price), row[1].ss_url, row[1].ss_api_url))
 cursor.execute("SELECT * FROM products")
 db = cursor.fetchall()
 print(db)
+connection.commit()
+connection.close()
+

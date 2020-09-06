@@ -1,4 +1,4 @@
-name,ss_api_url,ss_url,desired_price
+product_name,ss_api_url,ss_url,desired_price
 Brancott Estate Sauvignon Blanc 75cl,https://www.sainsburys.co.uk/groceries-api/gol-services/product/v1/product?filter[product_seo_url]=gb%2Fgroceries%2Fbrancott-estate-sauvignon-blanc-75cl&include[ASSOCIATIONS]=true&include[DIETARY_PROFILE]=true,https://www.sainsburys.co.uk/gol-ui/Product/brancott-estate-sauvignon-blanc-75cl,7
 Oyster Bay Sauvignon Blanc 75cl,https://www.sainsburys.co.uk/groceries-api/gol-services/product/v1/product?filter[product_seo_url]=gb%2Fgroceries%2Fsauvignon-blanc-%2Foyster-bay-sauvignon-blanc-75cl&include[ASSOCIATIONS]=true&include[DIETARY_PROFILE]=true,https://www.sainsburys.co.uk/gol-ui/Product/oyster-bay-sauvignon-blanc-75cl,8
 Villa Maria Private Bin Sauvignon Blanc 75cl,https://www.sainsburys.co.uk/groceries-api/gol-services/product/v1/product?filter[product_seo_url]=gb%2Fgroceries%2Fsauvignon-blanc-%2Fvilla-maria-private-bin-sauvignon-blanc-75cl&include[ASSOCIATIONS]=true&include[DIETARY_PROFILE]=true,https://www.sainsburys.co.uk/gol-ui/Product/villa-maria-private-bin-sauvignon-blanc-75cl,7
