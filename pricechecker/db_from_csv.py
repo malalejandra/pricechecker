@@ -21,8 +21,9 @@ c2 ="""CREATE TABLE IF NOT EXISTS
 sainsbury_prices(product_id INTEGER,  price_date TEXT, price REAL, FOREIGN KEY(product_id) REFERENCES products(product_id))"""
 cursor.execute(c2)
 for row in data.iterrows():
-    cursor.execute("INSERT INTO products (product_name, desired_price, url_ss, url_ss_api) VALUES (?,?,?,?)",
-                   (row[1].product_name, float(row[1].desired_price), row[1].ss_url, row[1].ss_api_url))
+
+    cursor.execute("INSERT INTO products (product_id, product_name, desired_price, url_ss, url_ss_api) VALUES (?,?,?,?,?) ON CONFLICT(product_id) DO NOTHING",
+                   (row[1].id, row[1].product_name, float(row[1].desired_price), row[1].ss_url, row[1].ss_api_url))
 cursor.execute("SELECT * FROM products")
 db = cursor.fetchall()
 print(db)
